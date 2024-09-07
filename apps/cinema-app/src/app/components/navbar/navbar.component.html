@@ -1,0 +1,54 @@
+<mat-toolbar
+  class="d-flex justify-content-between align-items-center fullWidth"
+  color="primary"
+>
+  <div>Ramona Cinema</div>
+  <div class="d-flex justify-content-end align-items-center">
+    <app-action-button class="mx-1"
+      ><div iconBtn>
+        <mat-icon fontIcon="home" [routerLink]="'/'" />
+      </div>
+    </app-action-button>
+    <app-action-button *ngIf="cartQuantity > 0" (click)="toggleCart()"
+      ><div iconBtn>
+        <mat-icon
+          [matBadge]="cartQuantity"
+          [matBadgeColor]="'warn'"
+          fontIcon="shopping_cart"
+        />
+      </div>
+    </app-action-button>
+    <app-action-button
+    class="mr-1"
+      routerLinkActive="active-link"
+      [routerLink]="'/store'"
+      text="Store"
+    />
+    <app-action-button
+    class="mx-1"
+      text="Tickets"
+      routerLinkActive="active-link"
+      [routerLink]="'/tickets'"
+    />
+    <app-action-button
+    class="mx-1"
+      text="Contact"
+      routerLinkActive
+      [routerLink]="'/contact'"
+    />
+    <mat-form-field class="w-25 mt-4">
+      <mat-select
+        class="currency-selector fs-6 p-0"
+        [(value)]="currencySelected"
+        (selectionChange)="changeCurrency($event)"
+      >
+        <mat-option
+          *ngFor="let currency of currencyTypesOptions"
+          [value]="currency.value"
+        >
+          {{ currency.viewValue }}
+        </mat-option>
+      </mat-select></mat-form-field
+    >
+  </div>
+</mat-toolbar>

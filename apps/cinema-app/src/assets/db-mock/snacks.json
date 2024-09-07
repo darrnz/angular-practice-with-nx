@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Popcorn",
+    "description": "Classic salted popcorn.",
+    "price": 40.5,
+    "imageUrl": "https://example.com/images/popcorn.jpg",
+    "category": "food",
+    "type": "snack"
+  },
+  {
+    "id": 2,
+    "name": "Nachos",
+    "description": "Crispy nachos with cheese dip.",
+    "price": 50.0,
+    "imageUrl": "https://example.com/images/nachos.jpg",
+    "category": "food",
+    "type": "snack"
+  },
+  {
+    "id": 3,
+    "name": "Hot Dog",
+    "description": "Grilled hot dog with ketchup and mustard.",
+    "price": 60.0,
+    "imageUrl": "https://example.com/images/hotdog.jpg",
+    "category": "food",
+    "type": "snack"
+  },
+  {
+    "id": 4,
+    "name": "Pretzel",
+    "description": "Soft and warm pretzel with salt.",
+    "price": 30.5,
+    "imageUrl": "https://example.com/images/pretzel.jpg",
+    "category": "food",
+    "type": "snack"
+  },
+  {
+    "id": 5,
+    "name": "Candy",
+    "description": "Assorted movie theater candy.",
+    "price": 30.0,
+    "imageUrl": "https://example.com/images/candy.jpg",
+    "category": "sweets",
+    "type": "snack"
+  },
+  {
+    "id": 6,
+    "name": "Chocolate Bar",
+    "description": "Rich and creamy chocolate bar.",
+    "price": 20.5,
+    "imageUrl": "https://example.com/images/chocolate.jpg",
+    "category": "sweets",
+    "type": "snack"
+  },
+  {
+    "id": 7,
+    "name": "Ice Cream",
+    "description": "Vanilla ice cream cup.",
+    "price": 30.75,
+    "imageUrl": "https://example.com/images/icecream.jpg",
+    "category": "desserts",
+    "type": "snack"
+  },
+  {
+    "id": 8,
+    "name": "Soda",
+    "description": "Chilled soda of your choice.",
+    "price": 20.0,
+    "imageUrl": "https://example.com/images/soda.jpg",
+    "category": "drinks",
+    "type": "snack"
+  },
+  {
+    "id": 9,
+    "name": "Water",
+    "description": "Bottled mineral water.",
+    "price": 10.5,
+    "imageUrl": "https://example.com/images/water.jpg",
+    "category": "drinks",
+    "type": "snack"
+  },
+  {
+    "id": 10,
+    "name": "Coffee",
+    "description": "Freshly brewed hot coffee.",
+    "price": 20.5,
+    "imageUrl": "https://example.com/images/coffee.jpg",
+    "category": "drinks",
+    "type": "snack"
+  },
+  {
+    "id": 11,
+    "name": "Movie Ticket",
+    "description": "Movie Ticket",
+    "price": 20,
+    "imageUrl": "",
+    "category": "ticket",
+    "type": "ticket"
+  }
+]

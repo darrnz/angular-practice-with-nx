@@ -1,0 +1,13 @@
+@import "src/app/app.component.scss";
+
+.navButtonsMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currency-selector {
+ .mat-select {
+    margin-top: 0 !important;
+    border-radius: 25% !important;
+  }
+}

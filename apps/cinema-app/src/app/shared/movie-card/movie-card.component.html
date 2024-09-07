@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+  <mat-card-header [ngStyle]="{ height: '100px' }">
+    <mat-card-title>{{ movieData?.title?.toUpperCase() }}</mat-card-title>
+    <mat-card-subtitle>New Release</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="movieData?.image" [alt]="movieData?.title" />
+  <mat-card-content class="chip-list" >
+   <mat-chip-set >
+    <mat-chip *ngFor="let time of movieData?.timesheet">{{time}}</mat-chip>
+   </mat-chip-set>
+  </mat-card-content>
+  <mat-card-actions class="cardActions">
+    <app-action-button mat-button text="Buy Tickets" (click)="goToTickets()"/>
+    <app-action-button
+      mat-button
+      text="Details"
+      (click)="goToMovieDetails(movieData?.id ?? '')"
+    />
+  </mat-card-actions>
+</mat-card>

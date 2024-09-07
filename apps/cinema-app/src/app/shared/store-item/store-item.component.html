@@ -1,0 +1,26 @@
+<div class="store-item">
+  <!-- <mat-icon>{{ item?.icon }}</mat-icon> -->
+  <div class="item-details">
+    <h6>{{ item?.name }}</h6>
+  </div>
+  <div class="price">
+    <p>{{ item?.price ?? 0 | currencyConverter }}</p>
+  </div>
+
+  <div class="quantity-controls" *ngIf="!isCartItem">
+    <button mat-icon-button (click)="decreaseQuantity()">
+      <mat-icon>remove_circle_outline</mat-icon>
+    </button>
+    <span>{{ quantity }}</span>
+    <button mat-icon-button (click)="increaseQuantity()">
+      <mat-icon fontIcon="add">add</mat-icon>
+    </button>
+  </div>
+  <div class="mx-2">
+    <div>Number: {{ totalQuantity }}</div>
+  </div>
+  <div class="pl-3">
+    <div>Total: {{ (totalQuantity ?? 0) * (item?.price ?? 0) | currency }}</div>
+  </div>
+  <mat-divider></mat-divider>
+</div>

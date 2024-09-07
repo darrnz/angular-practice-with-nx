@@ -1,0 +1,172 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "blog-app": {
+      "root": "apps/blog-app",
+      "sourceRoot": "apps/blog-app/src",
+      "projectType": "application",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/blog-app",
+            "index": "apps/blog-app/src/index.html",
+            "main": "apps/blog-app/src/main.ts",
+            "polyfills": "apps/blog-app/src/polyfills.ts",
+            "tsConfig": "apps/blog-app/tsconfig.app.json",
+            "assets": ["apps/blog-app/src/favicon.ico", "apps/blog-app/src/assets"],
+            "styles": ["apps/blog-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/blog-app/src/environments/environment.ts",
+                  "with": "apps/blog-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "blog-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "blog-app:build:production"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/blog-app/src/test.ts",
+            "polyfills": "apps/blog-app/src/polyfills.ts",
+            "tsConfig": "apps/blog-app/tsconfig.spec.json",
+            "karmaConfig": "apps/blog-app/karma.conf.js",
+            "assets": ["apps/blog-app/src/favicon.ico", "apps/blog-app/src/assets"],
+            "styles": ["apps/blog-app/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cinema-app": {
+      "root": "apps/cinema-app",
+      "sourceRoot": "apps/cinema-app/src",
+      "projectType": "application",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/cinema-app",
+            "index": "apps/cinema-app/src/index.html",
+            "main": "apps/cinema-app/src/main.ts",
+            "polyfills": "apps/cinema-app/src/polyfills.ts",
+            "tsConfig": "apps/cinema-app/tsconfig.app.json",
+            "assets": ["apps/cinema-app/src/favicon.ico", "apps/cinema-app/src/assets"],
+            "styles": ["apps/cinema-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/cinema-app/src/environments/environment.ts",
+                  "with": "apps/cinema-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "cinema-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "cinema-app:build:production"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/cinema-app/src/test.ts",
+            "polyfills": "apps/cinema-app/src/polyfills.ts",
+            "tsConfig": "apps/cinema-app/tsconfig.spec.json",
+            "karmaConfig": "apps/cinema-app/karma.conf.js",
+            "assets": ["apps/cinema-app/src/favicon.ico", "apps/cinema-app/src/assets"],
+            "styles": ["apps/cinema-app/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "shared": {
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "projectType": "library",
+      "prefix": "shared",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/tsconfig.lib.json",
+            "project": "libs/shared/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  }
+}
