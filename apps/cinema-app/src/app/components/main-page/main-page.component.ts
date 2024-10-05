@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { moviesTimesheet } from 'apps/cinema-app/src/assets/db-mock/timesheet';
 import { Subject, takeUntil } from 'rxjs';
-import { ApiServiceService } from 'src/app/services/movie-service/api-service.service';
-import { IMovies } from 'src/app/types/movies';
-import { moviesTimesheet } from 'src/assets/db-mock/timesheet';
+import { ApiServiceService } from '../../services/movie-service/api-service.service';
+import { IMovies } from '../../types/movies';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit {
   private unsuscribe$ = new Subject<void>();
   movies: IMovies[] = [];
   movieTimeSheet: any[] = moviesTimesheet;

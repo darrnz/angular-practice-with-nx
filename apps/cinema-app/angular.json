@@ -1,0 +1,29 @@
+{
+  "projects": {
+    "cinema-app": {
+      "architect": {
+        "build": {
+          "options": {
+            "styles": [
+              "apps/cinema-app/src/styles.scss",
+              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "polyfills": "apps/cinema-app/src/polyfills.ts"
+          }
+        },
+        "serve": {
+          "configurations": {
+            "development": {
+              "styles": [
+                "apps/cinema-app/src/styles.scss",
+                "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

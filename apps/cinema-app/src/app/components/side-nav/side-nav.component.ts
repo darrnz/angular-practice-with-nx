@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CartService } from 'src/app/services/cart-service/cart.service';
 import { Router } from '@angular/router';
-import { StoreItemType, TotalCartType } from 'src/app/types/store';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalDialogComponent } from 'src/app/shared/modal-dialog/modal-dialog.component';
+import { ModalDialogComponent } from '@my-workspace/shared';
+import { CartService } from '../../services/cart-service/cart.service';
+import { TotalCartType, StoreItemType } from '../../types/store';
 
 @Component({
   selector: 'app-side-nav',
@@ -13,11 +13,11 @@ import { ModalDialogComponent } from 'src/app/shared/modal-dialog/modal-dialog.c
 })
 export class SideNavComponent implements OnInit, OnDestroy {
   public cartItemsSubscription!: Subscription;
-  public isOpen: boolean = false;
+  public isOpen = false;
   public cartInfo: TotalCartType = { list: [], totalToPay: 0 };
-  public totalToPay: number = 0;
+  public totalToPay = 0;
   public selectedMovies: StoreItemType[] | undefined;
-  public cartHasTickets: boolean = false;
+  public cartHasTickets = false;
 
   constructor(
     private cartService: CartService,
@@ -78,7 +78,7 @@ export class SideNavComponent implements OnInit, OnDestroy {
           },
           {
             text: 'No',
-            handler: () => {},
+            handler: () => {return},
           },
         ],
       },

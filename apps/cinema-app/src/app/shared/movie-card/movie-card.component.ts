@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IMovies } from 'src/app/types/movies';
-import { NavigationService } from 'src/app/utils/navigation-utils';
+import { IMovies } from '../../types/movies';
+import { NavigationService } from '@my-workspace/shared';
 
 @Component({
   selector: 'app-movie-card',
@@ -12,12 +12,12 @@ export class MovieCardComponent {
   constructor(private navigationService: NavigationService) { }
 
   goToMovieDetails(id: string | number) {
-    this.navigationService.navigateToMovieDetail(id);
+    this.navigationService.navigateTo('movie', id);
   }
   @Input() movieData: IMovies | undefined = undefined
 
   goToTickets() {
-    this.navigationService.navigateToTickets();
+    this.navigationService.navigateTo('tickets');
   }
   
 }

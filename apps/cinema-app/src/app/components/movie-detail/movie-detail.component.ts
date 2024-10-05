@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { NavigationService } from 'src/app/utils/navigation-utils';
+import { NavigationService } from '@my-workspace/shared';
 
 @Component({
   selector: 'app-movie-detail',
   templateUrl: './movie-detail.component.html',
-  styleUrls: ['./movie-detail.component.css']
+  styleUrls: ['./movie-detail.component.css'],
 })
 export class MovieDetailComponent {
-  constructor (private navigationService: NavigationService) {}
+  constructor(private navigationService: NavigationService) {}
 
   navigateToHome() {
-    this.navigationService.navigateToHome();
+    this.navigationService.navigateTo('/');
   }
 }

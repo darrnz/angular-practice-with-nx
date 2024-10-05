@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { CurrencyHandlerService } from 'src/app/services/currency-handler/currency-handler.service';
+import { CurrencyHandlerService } from '../../services/currency-handler/currency-handler.service';
 
 @Pipe({
   name: 'currencyConverter',

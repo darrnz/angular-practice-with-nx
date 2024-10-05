@@ -14,10 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "noImplicitAny": false,
     "paths": {
-      "@my-workspace/shared": ["shared/src/index.ts"],
       "@my-workspace/blog-app": ["apps/blog-app/src/index.ts"],
       "@my-workspace/cinema-app": ["apps/cinema-app/src/index.ts"],
+      "@my-workspace/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

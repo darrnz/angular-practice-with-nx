@@ -22,7 +22,7 @@
             "input": "apps/blog-app/public"
           }
         ],
-        "styles": ["apps/blog-app/src/styles.scss"],
+        "styles": ["apps/blog-app/src/styles.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css"],
         "scripts": []
       },
       "configurations": {

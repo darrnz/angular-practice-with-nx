@@ -10,7 +10,7 @@ import {
   SelectedItemType,
   StoreItemType,
   TotalCartType,
-} from 'src/app/types/store';
+} from '../../../../src/app/types/store';
 
 @Component({
   selector: 'app-ticket-item',
@@ -33,7 +33,7 @@ export class TicketItemComponent {
       this.quantityChange.emit($event);
     }
   }
-  totalQuantity: number = 0;
+  totalQuantity = 0;
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['cartItems'] && !changes['cartItems'].firstChange) {

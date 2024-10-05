@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+/* Estilos personalizados para el layout */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+
+
+@import 'bootstrap/scss/bootstrap';

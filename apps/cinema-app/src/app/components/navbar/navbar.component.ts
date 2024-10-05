@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CartService } from 'src/app/services/cart-service/cart.service';
-import { CurrencyHandlerService } from 'src/app/services/currency-handler/currency-handler.service';
+import { CartService } from '../../services/cart-service/cart.service';
+import { CurrencyHandlerService } from '../../services/currency-handler/currency-handler.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,8 +10,8 @@ import { CurrencyHandlerService } from 'src/app/services/currency-handler/curren
 })
 export class NavbarComponent implements OnInit {
   public cartItemsSubscription!: Subscription;
-  public cartIsOpen: boolean = false;
-  public cartQuantity: number = 0;
+  public cartIsOpen = false;
+  public cartQuantity = 0;
   public currencySelected = 'MXN';
   public currencyTypesOptions = [
     { value: 'MXN', viewValue: 'MXN' },

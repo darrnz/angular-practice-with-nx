@@ -5,18 +5,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { StoreComponent } from './components/store/store.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConctactComponent } from './components/conctact/conctact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule as SharedLib } from '@my-workspace/shared';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -32,14 +31,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
     BrowserAnimationsModule,
-    SharedModule,
+    SharedLib,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

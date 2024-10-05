@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { StoreItemType } from 'src/app/types/store';
+import { StoreItemType } from '../../types/store';
 
 @Injectable({
   providedIn: 'root',

@@ -2,36 +2,34 @@ import {
   Component,
   EventEmitter,
   Input,
+  OnChanges,
   OnInit,
   Output,
   SimpleChanges,
 } from '@angular/core';
-import {
-  SelectedItemType,
-  StoreItemType,
-  TotalCartType,
-} from 'src/app/types/store';
+import { StoreItemType, TotalCartType, SelectedItemType } from '../../types/store';
+
 
 @Component({
   selector: 'app-store-item',
   templateUrl: './store-item.component.html',
   styleUrls: ['./store-item.component.scss'],
 })
-export class StoreItemComponent implements OnInit {
+export class StoreItemComponent implements OnInit, OnChanges {
   @Input() item: StoreItemType | undefined;
-  @Input() customName?: string = '';
-  @Input() isCartItem: boolean = false;
+  @Input() customName = '';
+  @Input() isCartItem = false;
   @Input() cartItems: TotalCartType = {
     list: [] as SelectedItemType[],
     totalToPay: 0,
   };
   @Output() cartItemsChange = new EventEmitter<TotalCartType>();
-  quantity: number = 0;
-  totalQuantity: number = 0;
+  quantity = 0;
+  totalQuantity = 0;
 
   cartHasItem() {
     if (this.item?.type === 'ticket') {
-      return true; // Always return true for tickets
+      return true;
     }
     return this.cartItems?.list.some((item) => item.id === this.item?.id);
   }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { TotalCartType } from 'src/app/types/store';
+import { TotalCartType } from '../../types/store';
 
 @Injectable({
   providedIn: 'root',
@@ -13,8 +13,6 @@ export class CartService {
   });
 
   cart$ = this.cartSubject.asObservable();
-
-  constructor() {}
 
   getCartItems(): TotalCartType {
     return this.cartSubject.getValue();

@@ -16,6 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -36,6 +38,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatTabsModule
   ],
   exports: [
     MatSidenavModule,
@@ -54,6 +57,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatTabsModule
   ],
 })
 export class MaterialModule {}

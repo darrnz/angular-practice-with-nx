@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CartService } from 'src/app/services/cart-service/cart.service';
-import { ApiServiceService } from 'src/app/services/movie-service/api-service.service';
-import { IMovies } from 'src/app/types/movies';
+import { CartService } from '../../services/cart-service/cart.service';
+import { ApiServiceService } from '../../services/movie-service/api-service.service';
+import { IMovies } from '../../types/movies';
 import {
-  MovieSelectionType,
   StoreItemType,
   TotalCartType,
-} from 'src/app/types/store';
+  MovieSelectionType,
+} from '../../types/store';
 
 @Component({
   selector: 'app-tickets',
@@ -23,10 +23,10 @@ export class TicketsComponent implements OnInit {
   };
   totalCart: number = this.cartItems.totalToPay;
   selectedTicketsForm!: FormGroup;
-  date: string = '';
-  price: number = 50;
+  date = '';
+  price = 50;
 
-  selectedTime: string = '';
+  selectedTime = '';
   constructor(
     private apiServiceService: ApiServiceService,
     private cartService: CartService,
@@ -73,7 +73,6 @@ export class TicketsComponent implements OnInit {
       );
       return !moviesInCart.some((item) => item.id === movie.id);
     });
-
   }
 
   updateQuantity($event: any): void {
@@ -116,10 +115,10 @@ export class TicketsComponent implements OnInit {
       this.cartService.addCartItem({
         list: this.cartItems.list,
         totalToPay: this.cartItems.totalToPay,
-        isOpen: true
+        isOpen: true,
       });
       this.availableMovies = this.availableMovies.filter(
-        (movie) => movie.id !==  movieInfo.movieId
+        (movie) => movie.id !== movieInfo.movieId
       );
     }
   }

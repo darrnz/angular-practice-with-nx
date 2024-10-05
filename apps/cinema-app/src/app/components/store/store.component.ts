@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart-service/cart.service';
-import { SnackServiceService } from 'src/app/services/snack-service/snack-service.service';
-import { StoreItemType, TotalCartType } from 'src/app/types/store';
+import { CartService } from '../../services/cart-service/cart.service';
+import { SnackServiceService } from '../../services/snack-service/snack-service.service';
+import { TotalCartType, StoreItemType } from '../../types/store';
+
 
 @Component({
   selector: 'app-store',
@@ -51,5 +52,4 @@ export class StoreComponent implements OnInit {
       this.calculateTotalCart();
     });
   }
-  ngOnChanges() {}
 }
