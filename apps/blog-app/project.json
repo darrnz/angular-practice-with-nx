@@ -19,10 +19,13 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/blog-app/public"
+            "input": "apps/blog-app/src/app/assets",
           }
         ],
-        "styles": ["apps/blog-app/src/styles.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css"],
+        "styles": [
+          "apps/blog-app/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,6 +56,9 @@
       "defaultConfiguration": "production"
     },
     "serve": {
+      "options": {
+        "hmr": true
+      },
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {

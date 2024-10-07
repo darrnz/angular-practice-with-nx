@@ -1,7 +1,25 @@
 export type BlogCategoryType = {
-  category: string,
-  title: string
+  category: string;
+  title: string;
+};
+
+export type CommentsType = {
+  author: string;
+  comment: string;
+};
+
+export type PostInfoType = {
+  title: string;
+  imgUrl: string;
+  category: string;
+  id: string;
+  content: string;
+  comments: CommentsType[];
 }
+
+export type PostType = {
+  posts: PostInfoType[]
+};
 
 export const blogCategories = [
   {
@@ -18,14 +36,14 @@ export const blogCategories = [
   },
   {
     category: 'food',
-    title: 'Food'
+    title: 'Food',
   },
   {
     category: 'business',
-    title: 'Business'
+    title: 'Business',
   },
   {
     category: 'work',
-    title: 'Work'
-  }
-]
+    title: 'Work',
+  },
+];

@@ -4,6 +4,7 @@ import { MainComponent } from './components/main/main.component';
 export const appRoutes: Route[] = [
   {
     path: '',
+
     component: MainComponent,
-  },
+  }
 ];

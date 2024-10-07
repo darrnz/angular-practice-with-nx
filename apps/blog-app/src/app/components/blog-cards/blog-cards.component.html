@@ -1,7 +1,21 @@
-<section>
-  <div>
-    <mat-tab-group *ngFor="let category for blogCategories">
-      <div label="category?.title">{{category.title}} </div>
-    </mat-tab-group>
-  </div>
-</section>
+<div>
+  <mat-tab-group
+    class="my-4 pb-3"
+    mat-align-tabs="center"
+    [selectedIndex]="selectedCategory"
+    (selectedIndexChange)="getBlogCategoryTitle($event)"
+  >
+    <mat-tab
+      class="mx-1 py-2"
+      *ngFor="let category of blogCategories; let i = index"
+      isActive
+    >
+      <ng-template mat-tab-label class="me-3">
+        {{ category.title }}
+      </ng-template>
+      <section class="my-2 d-flex flex-wrap row justify-content-start align-items-center">
+        <app-card *ngFor="let post of filteredBlogData" class="col-4" [post]="post"></app-card>
+      </section>
+    </mat-tab>
+  </mat-tab-group>
+</div>
